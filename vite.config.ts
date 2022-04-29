@@ -1,4 +1,6 @@
 import type {UserConfig} from "vite";
+// import vue from '@vitejs/plugin-vue';
+// import styleImport, { VantResolve } from 'vite-plugin-style-import';
 
 const viteConfig:UserConfig = {
     // 端口号
@@ -13,7 +15,13 @@ const viteConfig:UserConfig = {
             ws: true,
             rewrite: path => path.replace(/^\/api/,'')
         }
-    }
+    },
+    // plugins: [
+    //     vue(),
+    //     styleImport({
+    //         resolves: [VantResolve()],
+    //     }),
+    // ],
 }
 
 export default viteConfig
